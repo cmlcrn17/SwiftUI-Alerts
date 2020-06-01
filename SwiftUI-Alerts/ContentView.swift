@@ -9,7 +9,7 @@
 import SwiftUI
 
 enum ActiveAlert {
-    case tc, parola, dogrulama
+    case tc, parola, dogrulama, basarili
 }
 
 struct ContentView: View {
@@ -42,6 +42,9 @@ struct ContentView: View {
             return
         }
         
+        self.activeAlert = .basarili
+        self.showAlert = true
+        
     }
     
     var body: some View {
@@ -62,6 +65,7 @@ struct ContentView: View {
                         .padding(10)
                         .font(Font.system(size: 30, weight: .medium, design: .serif))
                         .foregroundColor(Color(red: 125/255, green: 40/255, blue:133/255))
+                        .keyboardType(.numberPad)
                     
                     VStack(alignment: .leading, spacing: 4){
                         
@@ -138,6 +142,8 @@ struct ContentView: View {
                 return Alert(title: Text("Parola"), message: Text("Parola girmediniz."))
             case .dogrulama:
                 return Alert(title: Text("Doğrulama"), message: Text("Doğrulama yapmadınız."))
+            case .basarili:
+                return Alert(title: Text("Başarılı"), message: Text("Tüm kontroller başarılıdır."))
             }
         }
     }
