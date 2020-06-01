@@ -8,13 +8,39 @@
 
 import SwiftUI
 
+enum ActiveAlert {
+    case tc, parola, dogrulama
+}
+
 struct ContentView: View {
     
+    @State private var showAlert = false
+    @State private var activeAlert: ActiveAlert = .tc
+    
+    @State private var isChecked:Bool = false
     @State private var txt_TCNumber = ""
     @State private var txt_Password = ""
-    @State private var isChecked:Bool = false
     
+    ///Kontrol işlemleri yapılır, hata mesajı görüntülenir.
     func getControl() -> Void{
+        
+        if(txt_TCNumber == ""){
+            self.activeAlert = .tc
+            self.showAlert = true
+            return
+        }
+        
+        if(txt_Password == ""){
+            self.activeAlert = .parola
+            self.showAlert = true
+            return
+        }
+        
+        if(isChecked == false){
+            self.activeAlert = .dogrulama
+            self.showAlert = true
+            return
+        }
         
     }
     
@@ -25,12 +51,12 @@ struct ContentView: View {
                 
                 Image("calendar")
                     .resizable()
-                    .frame(width: UIScreen.main.bounds.width * 0.35, height: UIScreen.main.bounds.height * 0.15)
-                    .shadow(color: .gray, radius: 3, x: 2, y: 3)
+                    .frame(width: UIScreen.main.bounds.width * 0.30, height: UIScreen.main.bounds.height * 0.16)
+                    .shadow(color: .gray, radius: 2, x: 2, y: 2)
                 
                 VStack(alignment: .leading) {
                     
-                    Spacer().frame(height: UIScreen.main.bounds.height * 0.100)
+                    Spacer().frame(height: UIScreen.main.bounds.height * 0.060)
                     
                     Text("Oturum Aç")
                         .padding(10)
@@ -70,7 +96,7 @@ struct ContentView: View {
                     Image(systemName: isChecked ? "checkmark.square": "square")
                         .foregroundColor(Color(red: 125/255, green: 40/255, blue:133/255))
                     
-                    Text("Yukarıdaki  bilgileri")
+                    Text("Yukarıdaki bilgileri")
                         .font(Font.system(size: 15, weight: .medium, design: .serif))
                         .foregroundColor(Color(red: 178/255, green: 178/255, blue:178/255))
                     
@@ -78,6 +104,7 @@ struct ContentView: View {
                     Text("doğruluyorum.")
                         .font(Font.system(size: 15, weight: .medium, design: .serif))
                         .foregroundColor(Color(red: 125/255, green: 40/255, blue:133/255))
+                    
                 }
             }
             
@@ -99,9 +126,17 @@ struct ContentView: View {
             //.shadow(color: .gray, radius: 5, x: 5, y: 5)
             
             Spacer().frame(width: UIScreen.main.bounds.width * 1, height: UIScreen.main.bounds.height * 0.175)
+            
+        } .alert(isPresented: $showAlert) {
+            switch activeAlert {
+            case .tc:
+                return Alert(title: Text("TC Kimlik"), message: Text("TC Kimlik Numaranızı girmediniz."))
+            case .parola:
+                return Alert(title: Text("Parola"), message: Text("Parola girmediniz."))
+            case .dogrulama:
+                return Alert(title: Text("Doğrulama"), message: Text("Doğrulama yapmadınız."))
+            }
         }
-        
-        
     }
 }
 
