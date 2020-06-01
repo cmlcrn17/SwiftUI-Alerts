@@ -68,8 +68,9 @@ struct ContentView: View {
                         TextField("TC Kimlik No", text: self.$txt_TCNumber)
                             .padding(10)
                             .font(Font.system(size: 15, weight: .medium, design: .serif))
-                            .background(RoundedRectangle(cornerRadius: 10))
-                            .foregroundColor(Color(red: 247/255, green: 247/255, blue:247/255))
+                            .background(Color(red: 247/255, green: 247/255, blue:247/255))
+                            .foregroundColor(Color(red: 125/255, green: 40/255, blue:133/255))
+                            .cornerRadius(5)
                         
                     }.padding(.bottom, 16)
                     
@@ -78,8 +79,10 @@ struct ContentView: View {
                         SecureField("Parola", text: self.$txt_Password)
                             .padding(10)
                             .font(Font.system(size: 15, weight: .medium, design: .serif))
+                            .background(Color(red: 247/255, green: 247/255, blue:247/255))
                             .background(RoundedRectangle(cornerRadius: 10))
-                            .foregroundColor(Color(red: 247/255, green: 247/255, blue:247/255))
+                            .foregroundColor(Color(red: 125/255, green: 40/255, blue:133/255))
+                            .cornerRadius(5)
                         
                     }
                 }
