@@ -13,6 +13,8 @@
 		1492541C2485800400AD62FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1492541B2485800400AD62FB /* Assets.xcassets */; };
 		1492541F2485800400AD62FB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1492541E2485800400AD62FB /* Preview Assets.xcassets */; };
 		149254222485800400AD62FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 149254202485800400AD62FB /* LaunchScreen.storyboard */; };
+		149DC46F24A53110007D6FC7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 149DC46E24A53110007D6FC7 /* GoogleService-Info.plist */; };
+		6471C6069CD81C4BCB19F3CE /* Pods_SwiftUI_Alerts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 252E9CE2548A805BA2700913 /* Pods_SwiftUI_Alerts.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,10 @@
 		1492541E2485800400AD62FB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		149254212485800400AD62FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		149254232485800400AD62FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		149DC46E24A53110007D6FC7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1C7B92137CCD1B0B64AC945B /* Pods-SwiftUI-Alerts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUI-Alerts.release.xcconfig"; path = "Target Support Files/Pods-SwiftUI-Alerts/Pods-SwiftUI-Alerts.release.xcconfig"; sourceTree = "<group>"; };
+		252E9CE2548A805BA2700913 /* Pods_SwiftUI_Alerts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftUI_Alerts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C11176501EDB225A60502F61 /* Pods-SwiftUI-Alerts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUI-Alerts.debug.xcconfig"; path = "Target Support Files/Pods-SwiftUI-Alerts/Pods-SwiftUI-Alerts.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6471C6069CD81C4BCB19F3CE /* Pods_SwiftUI_Alerts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0981C42A487CAE5D7A89B457 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C11176501EDB225A60502F61 /* Pods-SwiftUI-Alerts.debug.xcconfig */,
+				1C7B92137CCD1B0B64AC945B /* Pods-SwiftUI-Alerts.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		1492540924857FFB00AD62FB = {
 			isa = PBXGroup;
 			children = (
 				1492541424857FFB00AD62FB /* SwiftUI-Alerts */,
 				1492541324857FFB00AD62FB /* Products */,
+				0981C42A487CAE5D7A89B457 /* Pods */,
+				8C4B0790D7862E405F06F8E6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +81,7 @@
 				1492541B2485800400AD62FB /* Assets.xcassets */,
 				149254202485800400AD62FB /* LaunchScreen.storyboard */,
 				149254232485800400AD62FB /* Info.plist */,
+				149DC46E24A53110007D6FC7 /* GoogleService-Info.plist */,
 				1492541D2485800400AD62FB /* Preview Content */,
 			);
 			path = "SwiftUI-Alerts";
@@ -75,6 +95,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		8C4B0790D7862E405F06F8E6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				252E9CE2548A805BA2700913 /* Pods_SwiftUI_Alerts.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -82,9 +110,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 149254262485800400AD62FB /* Build configuration list for PBXNativeTarget "SwiftUI-Alerts" */;
 			buildPhases = (
+				578FEDC0C9263322769562A6 /* [CP] Check Pods Manifest.lock */,
 				1492540E24857FFB00AD62FB /* Sources */,
 				1492540F24857FFB00AD62FB /* Frameworks */,
 				1492541024857FFB00AD62FB /* Resources */,
+				F5DBF37D7A7BB3A761EEFF9C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -134,12 +164,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				149254222485800400AD62FB /* LaunchScreen.storyboard in Resources */,
+				149DC46F24A53110007D6FC7 /* GoogleService-Info.plist in Resources */,
 				1492541F2485800400AD62FB /* Preview Assets.xcassets in Resources */,
 				1492541C2485800400AD62FB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		578FEDC0C9263322769562A6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwiftUI-Alerts-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5DBF37D7A7BB3A761EEFF9C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftUI-Alerts/Pods-SwiftUI-Alerts-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftUI-Alerts/Pods-SwiftUI-Alerts-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftUI-Alerts/Pods-SwiftUI-Alerts-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1492540E24857FFB00AD62FB /* Sources */ = {
@@ -282,6 +355,7 @@
 		};
 		149254272485800400AD62FB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C11176501EDB225A60502F61 /* Pods-SwiftUI-Alerts.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -293,7 +367,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.SwiftUI-Alerts";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.SwiftUI-Firebase";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -302,6 +376,7 @@
 		};
 		149254282485800400AD62FB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C7B92137CCD1B0B64AC945B /* Pods-SwiftUI-Alerts.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -313,7 +388,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.SwiftUI-Alerts";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.SwiftUI-Firebase";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
