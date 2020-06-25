@@ -10,7 +10,7 @@ import SwiftUI
 import Firebase
 
 enum ActiveAlert_SignUp {
-    case eposta, parola, dogrulama, basarili
+    case eposta, parola, dogrulama, basarili, eposta_uygunsuzlugu
 }
 
 struct SignUp: View {
@@ -44,7 +44,7 @@ struct SignUp: View {
         }
         
         
-       return true
+        return true
         
     }
     
@@ -62,7 +62,7 @@ struct SignUp: View {
                     
                     Spacer().frame(height: UIScreen.main.bounds.height * 0.060)
                     
-                    Text("Oturum Aç")
+                    Text("Üye Ol")
                         .padding(10)
                         .font(Font.system(size: 30, weight: .medium, design: .serif))
                         .foregroundColor(Color(red: 125/255, green: 40/255, blue:133/255))
@@ -76,6 +76,7 @@ struct SignUp: View {
                             .background(Color(red: 247/255, green: 247/255, blue:247/255))
                             .foregroundColor(Color(red: 125/255, green: 40/255, blue:133/255))
                             .cornerRadius(5)
+                            .keyboardType(.emailAddress)
                         
                     }.padding(.bottom, 16)
                     
@@ -124,20 +125,21 @@ struct SignUp: View {
                 if(state){
                     
                     Auth.auth().createUser(withEmail: self.txt_EPosta, password: self.txt_Password) { (result, error) in
-                                               if error != nil {
-                                                   print(error?.localizedDescription)
-                                               } else {
-                                            
-                                               print("Başarılı")
-                                                   
-                                               }
-                                           }
-                    
-                    
-                    
+                        if error != nil {
+                            print(error?.localizedDescription)
+                            
+                            self.activeAlert = .eposta_uygunsuzlugu
+                            self.showAlert = true
+                            
+                        } else {
+                            
+                            print("Başarılı")
+                            
+                        }
+                    }
                 }
             }) {
-                Text("Oturum Aç")
+                Text("Üye Ol")
                     .padding(10)
                     .font(Font.system(size: 18, weight: .medium, design: .serif))
                     .foregroundColor(Color.white)
@@ -161,9 +163,11 @@ struct SignUp: View {
                 return Alert(title: Text("Doğrulama"), message: Text("Doğrulama yapmadınız."))
             case .basarili:
                 return Alert(title: Text("Başarılı"), message: Text("Tüm kontroller başarılıdır."))
+            case .eposta_uygunsuzlugu:
+                return Alert(title: Text("E-Posta"), message: Text("Girmiş olduğunuz e-posta geçersiz görünmektedir."))
             }
         }
-            .navigationBarTitle("")
+        .navigationBarTitle("")
     }
 }
 
