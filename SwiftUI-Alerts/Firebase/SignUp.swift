@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import Firebase
 
 enum ActiveAlert_SignUp {
     case eposta, parola, dogrulama, basarili
@@ -22,28 +23,28 @@ struct SignUp: View {
     @State private var txt_Password = ""
     
     ///Kontrol işlemleri yapılır, hata mesajı görüntülenir.
-    func getControl() -> Void{
+    func getControl() -> Bool{
         
         if(txt_EPosta == ""){
             self.activeAlert = .eposta
             self.showAlert = true
-            return
+            return false
         }
         
         if(txt_Password == ""){
             self.activeAlert = .parola
             self.showAlert = true
-            return
+            return false
         }
         
         if(isChecked == false){
             self.activeAlert = .dogrulama
             self.showAlert = true
-            return
+            return false
         }
         
-        self.activeAlert = .basarili
-        self.showAlert = true
+        
+       return true
         
     }
     
@@ -118,7 +119,23 @@ struct SignUp: View {
             Spacer().frame(width: UIScreen.main.bounds.width * 1, height: UIScreen.main.bounds.height * 0.05)
             
             Button(action: {
-                self.getControl()
+                let state : Bool = self.getControl()
+                
+                if(state){
+                    
+                    Auth.auth().createUser(withEmail: self.txt_EPosta, password: self.txt_Password) { (result, error) in
+                                               if error != nil {
+                                                   print(error?.localizedDescription)
+                                               } else {
+                                            
+                                               print("Başarılı")
+                                                   
+                                               }
+                                           }
+                    
+                    
+                    
+                }
             }) {
                 Text("Oturum Aç")
                     .padding(10)
