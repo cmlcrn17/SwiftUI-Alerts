@@ -3,17 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1492541624857FFB00AD62FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1492541524857FFB00AD62FB /* AppDelegate.swift */; };
 		1492541824857FFB00AD62FB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1492541724857FFB00AD62FB /* SceneDelegate.swift */; };
-		1492541A24857FFB00AD62FB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1492541924857FFB00AD62FB /* ContentView.swift */; };
+		1492541A24857FFB00AD62FB /* AlertsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1492541924857FFB00AD62FB /* AlertsView.swift */; };
 		1492541C2485800400AD62FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1492541B2485800400AD62FB /* Assets.xcassets */; };
 		1492541F2485800400AD62FB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1492541E2485800400AD62FB /* Preview Assets.xcassets */; };
 		149254222485800400AD62FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 149254202485800400AD62FB /* LaunchScreen.storyboard */; };
 		149DC46F24A53110007D6FC7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 149DC46E24A53110007D6FC7 /* GoogleService-Info.plist */; };
+		149DC47224A53672007D6FC7 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149DC47124A53672007D6FC7 /* SignUp.swift */; };
+		149DC47424A5367A007D6FC7 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149DC47324A5367A007D6FC7 /* SignIn.swift */; };
 		6471C6069CD81C4BCB19F3CE /* Pods_SwiftUI_Alerts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 252E9CE2548A805BA2700913 /* Pods_SwiftUI_Alerts.framework */; };
 /* End PBXBuildFile section */
 
@@ -21,12 +23,14 @@
 		1492541224857FFB00AD62FB /* SwiftUI-Alerts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-Alerts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1492541524857FFB00AD62FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1492541724857FFB00AD62FB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1492541924857FFB00AD62FB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1492541924857FFB00AD62FB /* AlertsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsView.swift; sourceTree = "<group>"; };
 		1492541B2485800400AD62FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1492541E2485800400AD62FB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		149254212485800400AD62FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		149254232485800400AD62FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		149DC46E24A53110007D6FC7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		149DC47124A53672007D6FC7 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
+		149DC47324A5367A007D6FC7 /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 		1C7B92137CCD1B0B64AC945B /* Pods-SwiftUI-Alerts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUI-Alerts.release.xcconfig"; path = "Target Support Files/Pods-SwiftUI-Alerts/Pods-SwiftUI-Alerts.release.xcconfig"; sourceTree = "<group>"; };
 		252E9CE2548A805BA2700913 /* Pods_SwiftUI_Alerts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftUI_Alerts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C11176501EDB225A60502F61 /* Pods-SwiftUI-Alerts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUI-Alerts.debug.xcconfig"; path = "Target Support Files/Pods-SwiftUI-Alerts/Pods-SwiftUI-Alerts.debug.xcconfig"; sourceTree = "<group>"; };
@@ -50,7 +54,6 @@
 				C11176501EDB225A60502F61 /* Pods-SwiftUI-Alerts.debug.xcconfig */,
 				1C7B92137CCD1B0B64AC945B /* Pods-SwiftUI-Alerts.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -75,9 +78,10 @@
 		1492541424857FFB00AD62FB /* SwiftUI-Alerts */ = {
 			isa = PBXGroup;
 			children = (
+				149DC47024A53655007D6FC7 /* Firebase */,
 				1492541524857FFB00AD62FB /* AppDelegate.swift */,
 				1492541724857FFB00AD62FB /* SceneDelegate.swift */,
-				1492541924857FFB00AD62FB /* ContentView.swift */,
+				1492541924857FFB00AD62FB /* AlertsView.swift */,
 				1492541B2485800400AD62FB /* Assets.xcassets */,
 				149254202485800400AD62FB /* LaunchScreen.storyboard */,
 				149254232485800400AD62FB /* Info.plist */,
@@ -93,6 +97,15 @@
 				1492541E2485800400AD62FB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		149DC47024A53655007D6FC7 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				149DC47124A53672007D6FC7 /* SignUp.swift */,
+				149DC47324A5367A007D6FC7 /* SignIn.swift */,
+			);
+			path = Firebase;
 			sourceTree = "<group>";
 		};
 		8C4B0790D7862E405F06F8E6 /* Frameworks */ = {
@@ -220,8 +233,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1492541624857FFB00AD62FB /* AppDelegate.swift in Sources */,
+				149DC47224A53672007D6FC7 /* SignUp.swift in Sources */,
+				149DC47424A5367A007D6FC7 /* SignIn.swift in Sources */,
 				1492541824857FFB00AD62FB /* SceneDelegate.swift in Sources */,
-				1492541A24857FFB00AD62FB /* ContentView.swift in Sources */,
+				1492541A24857FFB00AD62FB /* AlertsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

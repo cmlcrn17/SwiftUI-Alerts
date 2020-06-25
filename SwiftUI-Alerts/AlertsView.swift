@@ -12,7 +12,7 @@ enum ActiveAlert {
     case tc, parola, dogrulama, basarili
 }
 
-struct ContentView: View {
+struct AlertsView: View {
     
     @State private var showAlert = false
     @State private var activeAlert: ActiveAlert = .tc
@@ -151,6 +151,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        AlertsView()
     }
 }
