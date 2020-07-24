@@ -22,6 +22,8 @@ struct SignIn: View {
     @State private var txt_Password = ""
     @State var main : Bool = false
     
+    let prefs = UserDefaults.standard
+    
     ///Kontrol işlemleri yapılır, hata mesajı görüntülenir.
     func getControl() -> Void{
         
@@ -43,6 +45,9 @@ struct SignIn: View {
             return
         }
         
+        
+        prefs.set(txt_EPosta, forKey: "USERNAME")
+        prefs.set(txt_Password, forKey: "PASSWORD")
         self.main = true
         
     }

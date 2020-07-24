@@ -12,7 +12,8 @@ import SwiftUI
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    let main = Main();
+    let signIn = SignIn()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -22,12 +23,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Create the SwiftUI view that provides the window contents.
         //let contentView = AlertsView()//Alert Örnekleri için bu view aktifleştirilmelidir.
         
-        let contentView = SignIn() //Firebase örneği için bu view aktifleştirilmelidir.
+        let prefs = UserDefaults.standard
+        let userName = prefs.string(forKey: "USERNAME") ?? ""
+        let password = prefs.string(forKey: "PASSWORD") ?? ""
+        
+        //TODO: Tekrar firebase kullanıcı sorgusu yapılacak.
         
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = UIHostingController(rootView: contentView)
+            
+        if(userName != "" && password != ""){
+            window.rootViewController = UIHostingController(rootView: main)
+        }else{
+            window.rootViewController = UIHostingController(rootView: signIn)
+        }
+            
             self.window = window
             window.makeKeyAndVisible()
         }
