@@ -133,7 +133,6 @@ struct SignUp: View {
                             
                         } else {
                             
-                            print("Başarılı")
                             
                         }
                     }
@@ -153,6 +152,7 @@ struct SignUp: View {
             
             Spacer().frame(width: UIScreen.main.bounds.width * 1, height: UIScreen.main.bounds.height * 0.175)
             
+            
         } .alert(isPresented: $showAlert) {
             switch activeAlert {
             case .eposta:
@@ -171,3 +171,10 @@ struct SignUp: View {
     }
 }
 
+
+
+struct SignUp_Previews: PreviewProvider {
+    static var previews: some View {
+       SignUp()
+    }
+}

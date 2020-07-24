@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Bucket
-   uuid = "347FB1F6-4128-4E07-AF38-63E7A6C0DC31"
+   uuid = "7EC943E8-304C-4FD4-832D-FA272E5E610A"
    type = "0"
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "58D62F61-9673-46BA-90AB-E9D9AE05C9EC"
+            uuid = "BDB346E1-753C-4870-8937-AF4658B709ED"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SwiftUI-Alerts/Firebase/SignUp.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
@@ -23,7 +23,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "32A39C44-A433-4562-9C0E-7E3288F1F5C0"
+            uuid = "949D6F25-FC5F-47EA-9E8D-7D79607A3F44"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -36,7 +36,7 @@
             landmarkType = "24">
             <Locations>
                <Location
-                  uuid = "32A39C44-A433-4562-9C0E-7E3288F1F5C0 - 1564e416d728f438"
+                  uuid = "949D6F25-FC5F-47EA-9E8D-7D79607A3F44 - 1564e416d728f438"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -48,10 +48,10 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "127"
                   endingLineNumber = "127"
-                  offsetFromSymbolStart = "93">
+                  offsetFromSymbolStart = "92">
                </Location>
                <Location
-                  uuid = "32A39C44-A433-4562-9C0E-7E3288F1F5C0 - e64767e9afad2df1"
+                  uuid = "949D6F25-FC5F-47EA-9E8D-7D79607A3F44 - e64767e9afad2df1"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -63,9 +63,25 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "128"
                   endingLineNumber = "128"
-                  offsetFromSymbolStart = "154">
+                  offsetFromSymbolStart = "140">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3A32D155-0013-4707-8C66-E23294780364"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftUI-Alerts/Firebase/SignUp.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
+            landmarkName = "body"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

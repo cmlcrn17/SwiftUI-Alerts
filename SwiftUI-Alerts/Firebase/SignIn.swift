@@ -20,6 +20,7 @@ struct SignIn: View {
     @State private var isChecked:Bool = false
     @State private var txt_EPosta = ""
     @State private var txt_Password = ""
+    @State var main : Bool = false
     
     ///Kontrol işlemleri yapılır, hata mesajı görüntülenir.
     func getControl() -> Void{
@@ -42,8 +43,7 @@ struct SignIn: View {
             return
         }
         
-        self.activeAlert = .basarili
-        self.showAlert = true
+        self.main = true
         
     }
     
@@ -140,6 +140,10 @@ struct SignIn: View {
                 
                 
                 Spacer().frame(width: UIScreen.main.bounds.width * 1, height: UIScreen.main.bounds.height * 0.175)
+                
+                NavigationLink(destination: Main(), isActive: self.$main){
+                               Text("")
+                           }
                 
             } .alert(isPresented: $showAlert) {
                 switch activeAlert {
