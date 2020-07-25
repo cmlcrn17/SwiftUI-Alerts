@@ -148,7 +148,8 @@ struct SignIn: View {
                 
                 NavigationLink(destination: Main(), isActive: self.$main){
                                Text("")
-                           }
+                           }.navigationBarTitle("")
+                
                 
             } .alert(isPresented: $showAlert) {
                 switch activeAlert {
