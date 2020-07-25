@@ -12,7 +12,7 @@ import SwiftUI
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-    let main = Main();
+    let mainNav = MainNavigation();
     let signIn = SignIn()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -34,7 +34,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let window = UIWindow(windowScene: windowScene)
             
         if(userName != "" && password != ""){
-            window.rootViewController = UIHostingController(rootView: main)
+            window.rootViewController = UIHostingController(rootView: mainNav)
         }else{
             window.rootViewController = UIHostingController(rootView: signIn)
         }

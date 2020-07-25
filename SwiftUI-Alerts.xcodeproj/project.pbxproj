@@ -18,6 +18,7 @@
 		149DC47424A5367A007D6FC7 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149DC47324A5367A007D6FC7 /* SignIn.swift */; };
 		14B6710924CB8E2700DBA2A9 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B6710824CB8E2700DBA2A9 /* Main.swift */; };
 		14B6710B24CB912E00DBA2A9 /* ViewMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B6710A24CB912E00DBA2A9 /* ViewMap.swift */; };
+		14B6710F24CCBFAC00DBA2A9 /* AddActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B6710E24CCBFAC00DBA2A9 /* AddActivity.swift */; };
 		6471C6069CD81C4BCB19F3CE /* Pods_SwiftUI_Alerts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 252E9CE2548A805BA2700913 /* Pods_SwiftUI_Alerts.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		149DC47324A5367A007D6FC7 /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 		14B6710824CB8E2700DBA2A9 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		14B6710A24CB912E00DBA2A9 /* ViewMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewMap.swift; sourceTree = "<group>"; };
+		14B6710E24CCBFAC00DBA2A9 /* AddActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivity.swift; sourceTree = "<group>"; };
 		1C7B92137CCD1B0B64AC945B /* Pods-SwiftUI-Alerts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUI-Alerts.release.xcconfig"; path = "Target Support Files/Pods-SwiftUI-Alerts/Pods-SwiftUI-Alerts.release.xcconfig"; sourceTree = "<group>"; };
 		252E9CE2548A805BA2700913 /* Pods_SwiftUI_Alerts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftUI_Alerts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C11176501EDB225A60502F61 /* Pods-SwiftUI-Alerts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUI-Alerts.debug.xcconfig"; path = "Target Support Files/Pods-SwiftUI-Alerts/Pods-SwiftUI-Alerts.debug.xcconfig"; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				149DC47324A5367A007D6FC7 /* SignIn.swift */,
 				14B6710824CB8E2700DBA2A9 /* Main.swift */,
 				14B6710A24CB912E00DBA2A9 /* ViewMap.swift */,
+				14B6710E24CCBFAC00DBA2A9 /* AddActivity.swift */,
 			);
 			path = Firebase;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 			files = (
 				14B6710924CB8E2700DBA2A9 /* Main.swift in Sources */,
 				1492541624857FFB00AD62FB /* AppDelegate.swift in Sources */,
+				14B6710F24CCBFAC00DBA2A9 /* AddActivity.swift in Sources */,
 				149DC47224A53672007D6FC7 /* SignUp.swift in Sources */,
 				14B6710B24CB912E00DBA2A9 /* ViewMap.swift in Sources */,
 				149DC47424A5367A007D6FC7 /* SignIn.swift in Sources */,
