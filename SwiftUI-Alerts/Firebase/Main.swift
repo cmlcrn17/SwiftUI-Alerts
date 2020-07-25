@@ -17,7 +17,7 @@ struct Main: View {
     //TODO: Haritaya basılan konumların üzerine tıklandığında navigasyon yapılabilir olacak.
     //TODO: Etkinlik ekleme işlemleri geliştirilecek.
     @State var isShowing_AddActivity = false
-    
+    //
     var body: some View {
         VStack{
             TabView {
